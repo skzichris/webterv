@@ -1,0 +1,214 @@
+	<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+input[type=text], input[type=date], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(148, 148, 148);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+
+button {
+  background-color: rgb(148, 148, 148);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+        <header>
+                <h1>...</h1>
+            </header>
+          
+                  <nav>
+                      <ul>
+                  <li><a href="index.html">Főoldal</a></li>
+                  <li><a href="games.html">Játékok</a></li>
+                  <li><a href="teams.html">Csapatok</a></li>
+                  <li><a href="twitch.html">Twitch</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                      </ul>
+                  </nav>
+              
+              
+              <section>
+              
+                  
+                      <main>
+                          <h1>Az oldal készitői</h1>
+                          <ul>
+                                <li>Kozári Zsolt</li>
+                                <li>Dudás Krisztián</li>
+                          </ul>
+
+                </main>
+                      
+                  
+              </section>
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Kérdezzen tőlünk</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Név</b></label>
+      <input type="text" placeholder="Adja meg a nevét (kötelező)" name="uname" required>
+
+      <label for="psw"><b>Születési dátum</b></label>
+      <input type="date" name="psw" required><b></b>
+
+      <label for="email"><b>E-mail</b></label>
+      <input type="email" placeholder="Adja meg az email cimét (kötelező)" name="email" required>
+
+      <label for="uname"><b>Játék</b></label>
+      <input type="text" placeholder="Adja meg a játékot amivel kapcsolatban kérdezni szeretne (kötelező)" name="uname" required>
+
+      <label for="uname"><b>Kérdés</b></label>
+      <input type="text" placeholder="Tegye fel a kérdést (kötelező)" name="uname" required>
+
+      <label for="uname"><b>Vélemény</b></label>
+      <input type="text" placeholder="Kérem irja le véleményét az oldallal kapcsolatban (opcionális)" name="uname">
+
+      <button type="submit">Küldés</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<footer>
+		<p>2019 Szeged</p>
+	</footer>
+
+<script>
+
+var modal = document.getElementById('id01');
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+</script>
+
+</body>
+</html>
